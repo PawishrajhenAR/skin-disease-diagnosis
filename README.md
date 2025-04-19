@@ -99,6 +99,21 @@ The application supports the following languages:
 - Traditional Chinese (`tw.json`)
 - Simplified Chinese (`zh.json`)
 
+## About the Dataset
+
+HAM10000 ("Human Against Machine with 10000 training images") dataset - a large collection of multi-source dermatoscopic images of pigmented lesions.
+
+The dermatoscopic images are collected from different populations, acquired and stored by different modalities. The final dataset consists of 10,015 dermatoscopic images.
+
+It has 7 different classes of skin cancer which are listed below:
+- Melanocytic nevi
+- Melanoma
+- Benign keratosis-like lesions
+- Basal cell carcinoma
+- Actinic keratoses
+- Vascular lesions
+- Dermatofibroma
+
 ## Ollama Integration
 This project integrates the `ollama` library, which provides additional functionality for advanced operations. Ensure that `ollama` is installed and properly configured in your environment.
 
