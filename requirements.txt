@@ -1,0 +1,5 @@
+Flask
+TensorFlow
+Pillow
+Flask-Cors
+ollama
