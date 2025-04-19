@@ -1,0 +1,63 @@
+{
+  "app_name": "医疗图像诊断",
+  "app_description": "AI驱动的皮肤状况分析",
+  "upload_title": "上传医疗图像",
+  "upload_description": "在此处拖放图像，或点击下方按钮上传",
+  "camera_button": "相机",
+  "upload_button": "上传文件",
+  "supported_formats": "支持的格式：JPEG, PNG, HEIC",
+  "analyze_button": "分析图像",
+  "analyzing": "分析中...",
+  "cancel_button": "取消",
+  "diagnosis_title": "诊断结果",
+  "description_label": "描述",
+  "recommendations_label": "建议",
+  "history_title": "诊断历史",
+  "clear_history": "清除历史",
+  "no_history": "没有诊断历史",
+  "history_description": "当您分析一些图像后，您的诊断历史将显示在此处。",
+  "details_title": "诊断详情",
+  "high_confidence": "高置信度",
+  "medium_confidence": "中等置信度",
+  "low_confidence": "低置信度",
+  "dark_mode": "深色模式",
+  "light_mode": "浅色模式",
+  "language": "语言",
+  "download_report": "下载PDF报告",
+  "generating_report": "正在生成报告...",
+  "report_downloaded": "报告已下载",
+  "report_failed": "生成报告失败",
+  "analysis_complete": "分析完成！",
+  "analysis_failed": "分析图像失败",
+  "analysis_completed": "分析完成于",
+  "analyzed_on": "分析于",
+  "confirm_clear_history": "您确定要清除诊断历史吗？",
+  "history_cleared": "诊断历史已清除",
+  "select_image_file": "请选择图像文件（JPEG，PNG等）",
+  "language_changed": "语言已更改",
+  "disclaimer": "这是AI辅助分析，不应替代专业医疗诊断。请始终咨询医疗专业人员。",
+  "footer_text": "© 2023 医疗图像诊断 | AI驱动的皮肤状况分析工具",
+  "diseases": {
+    "actinic_keratoses": "光化性角化症",
+    "basal_cell_carcinoma": "基底细胞癌",
+    "benign_keratosis": "良性角化症",
+    "dermatofibroma": "皮肤纤维瘤",
+    "melanoma": "黑色素瘤",
+    "melanocytic_nevi": "黑色素细胞痣",
+    "vascular_lesions": "血管病变"
+  },
+  "features": {
+    "ai_analysis": {
+      "title": "AI驱动分析",
+      "description": "使用先进的机器学习算法，以高准确度分析和识别皮肤状况。"
+    },
+    "detailed_reports": {
+      "title": "详细报告",
+      "description": "生成包含诊断详情和建议行动的综合PDF报告。"
+    },
+    "multilingual": {
+      "title": "多语言支持",
+      "description": "提供多种语言版本，以帮助世界各地的医疗专业人员。"
+    }
+  }
+}

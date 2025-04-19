@@ -1,0 +1,66 @@
+{
+  "app_name": "Diagnóstico de Imágenes Médicas",
+  "app_description": "Análisis de afecciones cutáneas con IA",
+  "upload_title": "Subir Imagen Médica",
+  "upload_description": "Arrastra y suelta una imagen aquí, o haz clic en los botones de abajo para subir",
+  "camera_button": "Cámara",
+  "upload_button": "Subir Archivo",
+  "supported_formats": "Formatos soportados: JPEG, PNG, HEIC",
+  "analyze_button": "Analizar Imagen",
+  "analyzing": "Analizando...",
+  "cancel_button": "Cancelar",
+  "diagnosis_title": "Resultado del Diagnóstico",
+  "description_label": "Descripción",
+  "recommendations_label": "Recomendaciones",
+  "history_title": "Historial de Diagnósticos",
+  "clear_history": "Limpiar Historial",
+  "no_history": "Sin historial de diagnóstico",
+  "history_description": "Tu historial de diagnóstico aparecerá aquí una vez que hayas analizado algunas imágenes.",
+  "details_title": "Detalles del Diagnóstico",
+  "high_confidence": "Alta Confianza",
+  "medium_confidence": "Confianza Media",
+  "low_confidence": "Baja Confianza",
+  "dark_mode": "Modo Oscuro",
+  "light_mode": "Modo Claro",
+  "language": "Idioma",
+  "language_select": "Seleccionar Idioma",
+  "language_changed": "Idioma cambiado exitosamente",
+  "available_languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés",
+    "hi": "Hindi"
+  },
+  "analysis_complete": "¡Análisis completo!",
+  "analysis_failed": "Error al analizar la imagen",
+  "analysis_completed": "Análisis completado el",
+  "analyzed_on": "Analizado el",
+  "confirm_clear_history": "¿Estás seguro de que quieres borrar tu historial de diagnóstico?",
+  "history_cleared": "Historial de diagnóstico borrado",
+  "select_image_file": "Por favor, selecciona un archivo de imagen (JPEG, PNG, etc.)",
+  "disclaimer": "Este es un análisis asistido por IA y no debe reemplazar el diagnóstico médico profesional. Siempre consulte con un profesional de la salud.",
+  "footer_text": "© 2025 Diagnóstico de Imágenes Médicas | Herramienta de análisis de afecciones cutáneas con IA",
+  "diseases": {
+    "actinic_keratoses": "Queratosis Actínicas",
+    "basal_cell_carcinoma": "Carcinoma Basocelular",
+    "benign_keratosis": "Queratosis Benigna",
+    "dermatofibroma": "Dermatofibroma",
+    "melanoma": "Melanoma",
+    "melanocytic_nevi": "Nevos Melanocíticos",
+    "vascular_lesions": "Lesiones Vasculares"
+  },
+  "features": {
+    "ai_analysis": {
+      "title": "Análisis con IA",
+      "description": "Utiliza algoritmos avanzados de aprendizaje automático para analizar e identificar afecciones cutáneas con alta precisión."
+    },
+    "detailed_reports": {
+      "title": "Informes Detallados",
+      "description": "Genera informes PDF completos con detalles del diagnóstico y acciones recomendadas."
+    },
+    "multilingual": {
+      "title": "Soporte Multilingüe",
+      "description": "Disponible en varios idiomas para ayudar a profesionales médicos de todo el mundo."
+    }
+  }
+}

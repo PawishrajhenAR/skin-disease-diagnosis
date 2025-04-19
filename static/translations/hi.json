@@ -1,0 +1,66 @@
+{
+  "app_name": "चिकित्सा छवि निदान",
+  "app_description": "एआई-संचालित त्वचा रोग विश्लेषण",
+  "upload_title": "चिकित्सा छवि अपलोड करें",
+  "upload_description": "यहां एक छवि खींचें और छोड़ें, या अपलोड करने के लिए नीचे दिए गए बटन पर क्लिक करें",
+  "camera_button": "कैमरा",
+  "upload_button": "फ़ाइल अपलोड करें",
+  "supported_formats": "समर्थित प्रारूप: JPEG, PNG, HEIC",
+  "analyze_button": "छवि विश्लेषण करें",
+  "analyzing": "विश्लेषण हो रहा है...",
+  "cancel_button": "रद्द करें",
+  "diagnosis_title": "निदान परिणाम",
+  "description_label": "विवरण",
+  "recommendations_label": "सुझाव",
+  "history_title": "निदान इतिहास",
+  "clear_history": "इतिहास साफ़ करें",
+  "no_history": "कोई निदान इतिहास नहीं",
+  "history_description": "जब आप कुछ छवियों का विश्लेषण करेंगे, तब आपका निदान इतिहास यहां दिखाई देगा।",
+  "details_title": "निदान विवरण",
+  "high_confidence": "उच्च विश्वास",
+  "medium_confidence": "मध्यम विश्वास",
+  "low_confidence": "कम विश्वास",
+  "dark_mode": "डार्क मोड",
+  "light_mode": "लाइट मोड",
+  "language": "भाषा",
+  "language_select": "भाषा चुनें",
+  "language_changed": "भाषा सफलतापूर्वक बदल गई",
+  "available_languages": {
+    "en": "अंग्रे़ी",
+    "es": "स्पेनिश",
+    "fr": "फ्रेंच",
+    "hi": "हिंदी"
+  },
+  "analysis_complete": "विश्लेषण पूरा हुआ!",
+  "analysis_failed": "छवि विश्लेषण में विफल",
+  "analysis_completed": "विश्लेषण पूरा किया गया",
+  "analyzed_on": "विश्लेषण किया गया",
+  "confirm_clear_history": "क्या आप वाकई अपने निदान इतिहास को साफ़ करना चाहते हैं?",
+  "history_cleared": "निदान इतिहास साफ़ किया गया",
+  "select_image_file": "कृपया एक छवि फ़ाइल चुनें (JPEG, PNG, आदि)",
+  "disclaimer": "यह एक एआई-सहायक विश्लेषण है और इसे पेशेवर चिकित्सा निदान की जगह नहीं लेना चाहिए। हमेशा स्वास्थ्य पेशेवर से परामर्श करें।",
+  "footer_text": "© 2025 चिकित्सा छवि निदान | एआई-संचालित त्वचा रोग विश्लेषण उपकरण",
+  "diseases": {
+    "actinic_keratoses": "एक्टिनिक केराटोसिस",
+    "basal_cell_carcinoma": "बेसल सेल कार्सिनोमा",
+    "benign_keratosis": "सौम्य केराटोसिस",
+    "dermatofibroma": "डर्मेटोफाइब्रोमा",
+    "melanoma": "मेलेनोमा",
+    "melanocytic_nevi": "मेलानोसाइटिक नेवी",
+    "vascular_lesions": "संवहनी घाव"
+  },
+  "features": {
+    "ai_analysis": {
+      "title": "एआई-संचालित विश्लेषण",
+      "description": "उच्च सटीकता के साथ त्वचा की स्थितियों का विश्लेषण और पहचान करने के लिए उन्नत मशीन लर्निंग एल्गोरिथम का उपयोग करता है।"
+    },
+    "detailed_reports": {
+      "title": "विस्तृत रिपोर्ट",
+      "description": "निदान विवरण और अनुशंसित कार्यों के साथ व्यापक PDF रिपोर्ट तैयार करता है।"
+    },
+    "multilingual": {
+      "title": "बहुभाषी समर्थन",
+      "description": "दुनिया भर के चिकित्सा पेशेवरों की मदद के लिए कई भाषाओं में उपलब्ध।"
+    }
+  }
+}

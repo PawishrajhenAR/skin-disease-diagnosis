@@ -1,0 +1,66 @@
+{
+  "app_name": "醫療影像診斷",
+  "app_description": "AI驅動的皮膚狀況分析",
+  "upload_title": "上傳醫療影像",
+  "upload_description": "在此處拖放圖像，或點擊下方按鈕上傳",
+  "camera_button": "相機",
+  "upload_button": "上傳文件",
+  "supported_formats": "支援的格式：JPEG, PNG, HEIC",
+  "analyze_button": "分析圖像",
+  "analyzing": "分析中...",
+  "cancel_button": "取消",
+  "diagnosis_title": "診斷結果",
+  "description_label": "描述",
+  "recommendations_label": "建議",
+  "history_title": "診斷歷史",
+  "clear_history": "清除歷史",
+  "no_history": "沒有診斷歷史",
+  "history_description": "當您分析一些圖像後，您的診斷歷史將顯示在此處。",
+  "details_title": "診斷詳情",
+  "high_confidence": "高置信度",
+  "medium_confidence": "中等置信度",
+  "low_confidence": "低置信度",
+  "dark_mode": "深色模式",
+  "light_mode": "淺色模式",
+  "language": "語言",
+  "download_report": "下載PDF報告",
+  "generating_report": "正在生成報告...",
+  "report_downloaded": "報告已下載",
+  "report_failed": "生成報告失敗",
+  "analysis_complete": "分析完成！",
+  "analysis_failed": "分析圖像失敗",
+  "analysis_completed": "分析完成於",
+  "analyzed_on": "分析於",
+  "confirm_clear_history": "您確定要清除診斷歷史嗎？",
+  "history_cleared": "診斷歷史已清除",
+  "select_image_file": "請選擇圖像文件（JPEG，PNG等）",
+  "language_changed": "語言已更改",
+  "disclaimer": "這是AI輔助分析，不應替代專業醫療診斷。請始終諮詢醫療專業人員。",
+  "footer_text": "© 2025 醫療影像診斷 | AI驅動的皮膚狀況分析工具",
+  "find_nearby_doctor": "尋找附近的皮膚病醫生",
+  "about_title": "關於我們",
+  "about_description": "醫療影像診斷是一種使用AI來識別皮膚狀況的工具。它旨在幫助醫療專業人員提供準確和快速的診斷。",
+  "diseases": {
+    "actinic_keratoses": "光化性角化症",
+    "basal_cell_carcinoma": "基底細胞癌",
+    "benign_keratosis": "良性角化症",
+    "dermatofibroma": "皮膚纖維瘤",
+    "melanoma": "黑色素瘤",
+    "melanocytic_nevi": "黑色素細胞痣",
+    "vascular_lesions": "血管病變"
+  },
+  "features": {
+    "ai_analysis": {
+      "title": "AI驅動分析",
+      "description": "使用先進的機器學習算法，以高準確度分析和識別皮膚狀況。"
+    },
+    "detailed_reports": {
+      "title": "詳細報告",
+      "description": "生成包含診斷詳情和建議行動的綜合PDF報告。"
+    },
+    "multilingual": {
+      "title": "多語言支持",
+      "description": "提供多種語言版本，以幫助世界各地的醫療專業人員。"
+    }
+  }
+}

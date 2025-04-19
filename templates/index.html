@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Image Diagnosis</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <h1 id="app-name">Medical Image Diagnosis</h1>
+            <p id="app-description">AI-powered skin condition analysis</p>
+            <div class="header-controls">
+                <div class="theme-switch-wrapper">
+                    <span id="light-mode-text">Light Mode</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="dark-mode-text">Dark Mode</span>
+                </div>
+                <div class="language-selector">
+                    <label id="language-label">Language</label>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="zh">中文</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="tw">繁體中文</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="upload-section">
+            <div class="card">
+                <div class="card-content">
+                    <div id="upload-area" class="upload-area">
+                        <div id="upload-placeholder">
+                            <div class="upload-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            </div>
+                            <h3 id="upload-title">Upload Medical Image</h3>
+                            <p id="upload-description">Drag and drop an image here, or click the buttons below to upload</p>
+                            
+                            <div class="upload-buttons">
+                                <button id="camera-btn" class="button outline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+                                    <span id="camera-button-text">Camera</span>
+                                </button>
+                                
+                                <button id="upload-btn" class="button primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                    <span id="upload-button-text">Upload File</span>
+                                </button>
+                            </div>
+                            
+                            <input id="file-input" type="file" accept="image/*" class="hidden">
+                            <p id="supported-formats" class="upload-hint">Supported formats: JPEG, PNG, HEIC</p>
+                        </div>
+                        
+                        <div id="preview-container" class="preview-container hidden">
+                            <img id="image-preview" src="" alt="Preview">
+                            <button id="clear-btn" class="clear-button">×</button>
+                            <div class="analyze-section">
+                                <button id="analyze-btn" class="button primary">
+                                    <span id="analyze-button-text">Analyze Image</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-section" class="result-section hidden">
+            <div class="card">
+                <div class="card-header">
+                    <h2 id="diagnosis-title">Diagnosis Result</h2>
+                </div>
+                <div class="card-content">
+                    <div class="diagnosis-header">
+                        <h3 id="condition-name">Condition</h3>
+                    </div>
+                    
+                    <div class="diagnosis-description">
+                        <h4 id="description-label">Description</h4>
+                        <p id="condition-description">Loading description...</p>
+                    </div>
+                    
+                    <div class="diagnosis-recommendations">
+                        <h4 id="recommendations-label">Recommendations</h4>
+                        <ul id="recommendations-list">
+                            <!-- Recommendations will be added here -->
+                        </ul>
+                    </div>
+                    
+                    <div id="detailed-analysis-section" class="hidden">
+                        <h4 class="analysis-heading">Detailed LLaMA 3.2 Analysis</h4>
+                        <div class="detailed-analysis-content">
+                            <p id="detailed-analysis-text">Loading detailed analysis...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="diagnosis-footer">
+                        <div id="timestamp" class="timestamp">Analysis completed on: </div>
+                        <div class="action-buttons">
+                            <button id="find-doctor-btn" class="button secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span id="find-doctor-text">Find Nearby Skin Disease Doctor</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history-section" class="history-section">
+            <div class="history-header">
+                <h2 id="history-title">Diagnosis History</h2>
+                <button id="clear-history-btn" class="button outline danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+                    <span id="clear-history-text">Clear History</span>
+                </button>
+            </div>
+            <div id="history-container" class="history-container">
+                <!-- History cards will be added here -->
+                <div id="no-history" class="no-history">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3 id="no-history-title">No diagnosis history</h3>
+                    <p id="no-history-description">Your diagnosis history will appear here once you've analyzed some images.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="about-section">
+            <div class="card">
+                <div class="card-header">
+                    <h2 id="about-title">About</h2>
+                </div>
+                <div class="card-content">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p id="about-description">Medical Image Diagnosis is a tool that uses AI to identify skin conditions. It is designed to help medical professionals provide accurate and fast diagnoses.</p>
+                            <div class="developer-info">
+                                <h3>Developer</h3>
+                                <p><strong>Name:</strong> Pawishrajhen AR</p>
+                                <p><strong>Institution:</strong> SRM INSTITUTE OF SCIENCE AND TECHNOLOGY</p>
+                                <p><strong>Course:</strong> 3rd Year B.Tech AI(CINTEL)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                            </div>
+                            <h3 id="feature-ai-title">AI-Powered Analysis</h3>
+                            <p id="feature-ai-description">Uses advanced machine learning algorithms to analyze and identify skin conditions with high accuracy.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            </div>
+                            <h3 id="feature-reports-title">Detailed Reports</h3>
+                            <p id="feature-reports-description">Generates comprehensive PDF reports with diagnosis details and recommended actions.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            </div>
+                            <h3 id="feature-multilingual-title">Multilingual Support</h3>
+                            <p id="feature-multilingual-description">Available in multiple languages to help medical professionals around the world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="details-dialog" class="dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h2 id="details-title">Diagnosis Details</h2>
+                <span id="dialog-date" class="dialog-date"></span>
+                <button id="close-dialog-btn" class="close-button">×</button>
+            </div>
+            <div class="dialog-body">
+                <div class="dialog-grid">
+                    <div class="dialog-image-container">
+                        <img id="dialog-image" src="" alt="Condition">
+                    </div>
+                    <div class="dialog-details">
+                        <h3 id="dialog-condition">Condition</h3>
+                        
+                        <div class="diagnosis-description">
+                            <h4 id="dialog-description-label">Description</h4>
+                            <p id="dialog-description">Loading description...</p>
+                        </div>
+                        
+                        <div class="diagnosis-recommendations">
+                            <h4 id="dialog-recommendations-label">Recommendations</h4>
+                            <ul id="dialog-recommendations-list">
+                                <!-- Recommendations will be added here -->
+                            </ul>
+                        </div>
+                        
+                        <div class="dialog-detailed-analysis">
+                            <h4 class="analysis-heading">Detailed LLaMA 3.2 Analysis</h4>
+                            <div class="dialog-detailed-analysis">
+                                <p id="dialog-detailed-analysis-text">Loading detailed analysis...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dialog-actions">
+                            <button id="dialog-download-report-btn" class="button primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                <span id="dialog-download-report-text">Download PDF Report</span>
+                            </button>
+                            <button id="dialog-find-doctor-btn" class="button secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span id="dialog-find-doctor-text">Find Nearby Skin Disease Doctor</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="camera-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Camera Capture</h2>
+                <button id="close-camera-modal-btn" class="close-button">×</button>
+            </div>
+            <div class="modal-body">
+                <video id="camera-preview" autoplay playsinline></video>
+                <canvas id="camera-canvas" class="hidden"></canvas>
+                <div class="camera-controls">
+                    <button id="capture-btn" class="button primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>
+                        Capture
+                    </button>
+                    <button id="switch-camera-btn" class="button outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"></path><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M3 22v-6h6"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path></svg>
+                        Switch Camera
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>About Medical Image Diagnosis</h2>
+                <button id="close-about-modal" class="close-button">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="about-content">
+                    <p>Medical Image Diagnosis is an AI-powered tool designed to help healthcare professionals identify skin conditions through image analysis.</p>
+                    
+                    <div class="about-section">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>AI-powered skin condition analysis with high accuracy</li>
+                            <li>Detailed medical reports with LLaMA 3.2 analysis</li>
+                            <li>Multi-language support for global accessibility</li>
+                            <li>Camera integration for direct image capture</li>
+                            <li>Local diagnosis history for reference</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Developers</h3>
+                        <p>This application was developed by VisionAid - a team committed to creating accessible medical tools for healthcare professionals in rural and remote areas.</p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Disclaimer</h3>
+                        <p>This tool is designed as a diagnostic aid and should not replace professional medical judgment. Always consult with qualified healthcare professionals for diagnosis and treatment decisions.</p>
+                    </div>
+                    
+                    <div class="about-version">
+                        <p>Version 1.2.0 | © 2025 VisionAid DiagnoSys</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p id="disclaimer" class="disclaimer">This is an AI-assisted analysis and should not replace professional medical diagnosis. Always consult with a healthcare professional.</p>
+            <p id="footer-text" class="footer-text">© 2025 Medical Image Diagnosis | AI-powered skin condition analysis tool</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast">
+        <div id="toast-content" class="toast-content"></div>
+    </div>
+
+    <!-- About Modal Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // The modal and buttons might not be immediately available in the DOM
+        // since React renders them, so we use event delegation
+        document.body.addEventListener('click', function(e) {
+          // Check if the About button was clicked
+          if (e.target && (e.target.id === 'about-btn' || e.target.closest('#about-btn'))) {
+            const aboutModal = document.getElementById('about-modal');
+            if (aboutModal) {
+              aboutModal.style.display = 'flex';
+            }
+          }
+          
+          // Check if close button was clicked
+          if (e.target && (e.target.id === 'close-about-modal' || e.target.closest('#close-about-modal'))) {
+            const aboutModal = document.getElementById('about-modal');
+            if (aboutModal) {
+              aboutModal.style.display = 'none';
+            }
+          }
+          
+          // Close modal when clicking outside
+          if (e.target && e.target.id === 'about-modal') {
+            e.target.style.display = 'none';
+          }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            const aboutModal = document.getElementById('about-modal');
+            if (aboutModal && aboutModal.style.display === 'flex') {
+              aboutModal.style.display = 'none';
+            }
+          }
+        });
+      });
+    </script>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

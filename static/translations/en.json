@@ -1,0 +1,66 @@
+{
+  "app_name": "Medical Image Diagnosis",
+  "app_description": "AI-powered skin condition analysis",
+  "upload_title": "Upload Medical Image",
+  "upload_description": "Drag and drop an image here, or click the buttons below to upload",
+  "camera_button": "Camera",
+  "upload_button": "Upload File",
+  "supported_formats": "Supported formats: JPEG, PNG, HEIC",
+  "analyze_button": "Analyze Image",
+  "analyzing": "Analyzing...",
+  "cancel_button": "Cancel",
+  "diagnosis_title": "Diagnosis Result",
+  "description_label": "Description",
+  "recommendations_label": "Recommendations",
+  "history_title": "Diagnosis History",
+  "clear_history": "Clear History",
+  "no_history": "No diagnosis history",
+  "history_description": "Your diagnosis history will appear here once you've analyzed some images.",
+  "details_title": "Diagnosis Details",
+  "high_confidence": "High Confidence",
+  "medium_confidence": "Medium Confidence",
+  "low_confidence": "Low Confidence",
+  "dark_mode": "Dark Mode",
+  "light_mode": "Light Mode",
+  "language": "Language",
+  "language_select": "Select Language",
+  "language_changed": "Language changed successfully",
+  "available_languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "hi": "Hindi"
+  },
+  "analysis_complete": "Analysis complete!",
+  "analysis_failed": "Failed to analyze image",
+  "analysis_completed": "Analysis completed on",
+  "analyzed_on": "Analyzed on",
+  "confirm_clear_history": "Are you sure you want to clear your diagnosis history?",
+  "history_cleared": "Diagnosis history cleared",
+  "select_image_file": "Please select an image file (JPEG, PNG, etc.)",
+  "disclaimer": "This is an AI-assisted analysis and should not replace professional medical diagnosis. Always consult with a healthcare professional.",
+  "footer_text": "© 2025 Medical Image Diagnosis | AI-powered skin condition analysis tool",
+  "diseases": {
+    "actinic_keratoses": "Actinic Keratoses",
+    "basal_cell_carcinoma": "Basal Cell Carcinoma",
+    "benign_keratosis": "Benign Keratosis",
+    "dermatofibroma": "Dermatofibroma",
+    "melanoma": "Melanoma",
+    "melanocytic_nevi": "Melanocytic Nevi",
+    "vascular_lesions": "Vascular Lesions"
+  },
+  "features": {
+    "ai_analysis": {
+      "title": "AI-Powered Analysis",
+      "description": "Uses advanced machine learning algorithms to analyze and identify skin conditions with high accuracy."
+    },
+    "detailed_reports": {
+      "title": "Detailed Reports",
+      "description": "Generates comprehensive PDF reports with diagnosis details and recommended actions."
+    },
+    "multilingual": {
+      "title": "Multilingual Support",
+      "description": "Available in multiple languages to help medical professionals around the world."
+    }
+  }
+}

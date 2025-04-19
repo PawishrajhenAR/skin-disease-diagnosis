@@ -1,0 +1,66 @@
+{
+  "app_name": "Diagnostic d'Images Médicales",
+  "app_description": "Analyse des affections cutanées par IA",
+  "upload_title": "Télécharger une Image Médicale",
+  "upload_description": "Glissez-déposez une image ici, ou cliquez sur les boutons ci-dessous pour télécharger",
+  "camera_button": "Caméra",
+  "upload_button": "Télécharger un Fichier",
+  "supported_formats": "Formats supportés : JPEG, PNG, HEIC",
+  "analyze_button": "Analyser l'Image",
+  "analyzing": "Analyse en cours...",
+  "cancel_button": "Annuler",
+  "diagnosis_title": "Résultat du Diagnostic",
+  "description_label": "Description",
+  "recommendations_label": "Recommandations",
+  "history_title": "Historique des Diagnostics",
+  "clear_history": "Effacer l'Historique",
+  "no_history": "Aucun historique de diagnostic",
+  "history_description": "Votre historique de diagnostic apparaîtra ici une fois que vous aurez analysé quelques images.",
+  "details_title": "Détails du Diagnostic",
+  "high_confidence": "Confiance Élevée",
+  "medium_confidence": "Confiance Moyenne",
+  "low_confidence": "Confiance Faible",
+  "dark_mode": "Mode Sombre",
+  "light_mode": "Mode Clair",
+  "language": "Langue",
+  "language_select": "Sélectionner la Langue",
+  "language_changed": "Langue changée avec succès",
+  "available_languages": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "hi": "Hindi"
+  },
+  "analysis_complete": "Analyse terminée !",
+  "analysis_failed": "Échec de l'analyse de l'image",
+  "analysis_completed": "Analyse complétée le",
+  "analyzed_on": "Analysé le",
+  "confirm_clear_history": "Êtes-vous sûr de vouloir effacer votre historique de diagnostic ?",
+  "history_cleared": "Historique de diagnostic effacé",
+  "select_image_file": "Veuillez sélectionner un fichier image (JPEG, PNG, etc.)",
+  "disclaimer": "Ceci est une analyse assistée par IA et ne doit pas remplacer le diagnostic médical professionnel. Consultez toujours un professionnel de santé.",
+  "footer_text": "© 2025 Diagnostic d'Images Médicales | Outil d'analyse des affections cutanées par IA",
+  "diseases": {
+    "actinic_keratoses": "Kératoses Actiniques",
+    "basal_cell_carcinoma": "Carcinome Basocellulaire",
+    "benign_keratosis": "Kératose Bénigne",
+    "dermatofibroma": "Dermatofibrome",
+    "melanoma": "Mélanome",
+    "melanocytic_nevi": "Nævus Mélanocytaires",
+    "vascular_lesions": "Lésions Vasculaires"
+  },
+  "features": {
+    "ai_analysis": {
+      "title": "Analyse par IA",
+      "description": "Utilise des algorithmes avancés d'apprentissage automatique pour analyser et identifier les affections cutanées avec une grande précision."
+    },
+    "detailed_reports": {
+      "title": "Rapports Détaillés",
+      "description": "Génère des rapports PDF complets avec les détails du diagnostic et les actions recommandées."
+    },
+    "multilingual": {
+      "title": "Support Multilingue",
+      "description": "Disponible en plusieurs langues pour aider les professionnels de santé du monde entier."
+    }
+  }
+}
